@@ -1,0 +1,267 @@
+.board{
+    width:400px;
+    margin:auto;
+    box-shadow: 0px 17px 25px -6px rgba(0,0,0,0.48);
+}
+
+.row{
+    height: 50px;
+    display: flex;
+}
+
+.square{
+    flex:1;
+    border: 2px solid transparent;
+}
+
+.square-color1{
+    background-color: rgb(214, 185, 132);
+}
+
+.square-color2{
+    background-color: rgb(122, 90, 29);
+}
+
+.checker{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    /*margin: 6.5px 6.5px;*/
+    margin: 5.5px auto;
+}
+
+.checker-player1{
+    background-color: black;
+}
+
+.checker-player2{
+    background-color: white;
+}
+
+.king::after{
+    content: '';
+    display: block;
+    width: 31px;
+    height: 30px;
+    background-size: 100% 100%;
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    background-image: url('http://www.pngmart.com/files/10/Golden-Princess-Crown-Transparent-PNG.png');
+}
+
+.selected{
+    border: 2px solid red;
+}
+
+.welcome{
+    height: 100vh;
+    background-size : 100% 100%;
+    background-image: url('https://images.unsplash.com/photo-1551198581-aec5c1556d7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    background-image: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.container{
+    padding: 40px 250px;
+    text-align: center;
+    
+    transform:skew(0, -6.7deg);
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #fff;
+}
+
+#logo{
+    text-align: center;
+    font-size: 110px;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+    margin: 0px 0px 80px 0px;
+}
+
+#game-over-btn li{
+  width: 280px;
+}
+
+#game-over-btn li span{
+  font-size: 30px;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+#game-over-btn li:hover {
+  width: 350px;
+}
+
+.menu li {
+    display: inline-block;
+    width: 173px;
+    margin: 0 10px;
+    position: relative;
+    transform: skewy(-3deg);
+    backface-visibility: hidden;
+    transition: 200ms all;
+  }
+  .menu li span {
+    text-transform: uppercase;
+    font-family: 'Squada One', cursive;
+    font-weight: 800;
+    display: block;
+    background: #FFF;
+    padding: 2px 10px;
+    color: #333;
+    font-size: 35px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    text-shadow: 
+          1px 1px 0px #FFF, 
+          2px 2px 0px #999,
+          3px 3px 0px #FFF;
+    background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
+    transition: 1s all;
+    background-image: -webkit-linear-gradient(left top, 
+          transparent 0%, transparent 25%, 
+          rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
+          transparent 50%, transparent 75%, 
+          rgba(0,0,0,.15) 75%);
+    background-size: 4px 4px;
+      box-shadow: 
+          0 0 0 1px rgba(0,0,0,.4) inset, 
+          0 0 20px -5px rgba(0,0,0,.4),
+          0 0 0px 3px #FFF inset;
+  }
+  .menu li:hover {
+      width: 203px;
+      margin: 0 -5px;
+      cursor: pointer;
+  }
+  .menu span:hover {
+    color: red;
+  }
+  .menu li:after,
+  .menu li:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background: #BBB;
+    transform: skewY(8deg);
+    border-radius: 4px;
+  }
+  .menu li:after{
+    background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.4) 100%);
+    right: 0;
+    top: -4px; 
+  }
+  .menu li:before {
+    left: 0;
+    bottom: -4px;
+    background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) 100%);
+  }
+
+  #turn {
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: red;
+    font-size: 70px;
+    white-space: nowrap;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+
+  #game{
+    padding-top: 30px;
+    animation: fadeIn ease-in 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.5;
+    }
+  
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+  .turn-player1{
+    color: black;
+  }
+
+  .turn-player2{
+    color: #fff;
+  }
+
+  .right-up{
+    position: relative;
+    animation-name: right-up;
+    animation-duration: .6s;
+  }
+  @keyframes right-up {
+    0%   {left:-50px; top:50px;}
+    100%  { left:0px; top:0px;}
+  }
+  
+  .right-down{
+    position: relative;
+    animation-name: right-down;
+    animation-duration: .6s;
+  }
+  @keyframes right-down {
+    0%   {left:-50px; top:-50px;}
+    100%  { left:0px; top:0px;}
+  }
+  
+  .left-up{
+    position: relative;
+    animation-name: left-up;
+    animation-duration: .6s;
+  }
+  @keyframes left-up {
+    0%   {left:50px; top:50px;}
+    100%  { left:0px; top:0px;}
+  }
+  
+  .left-down{
+    position: relative;
+    animation-name: left-down;
+    animation-duration: .6s;
+  }
+  @keyframes left-down {
+    0%   {left:50px; top:-50px;}
+    100%  { left:0px; top:0px;}
+  }
+
+  #winner {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255,.4);
+    left: 0;
+    top:0;
+    text-align: center;
+  }
+
+  #winner p{
+    padding: 20px;
+    font-size: 80px;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+    color: white;
+  }
+
+  
+
+  
+  
+
+
