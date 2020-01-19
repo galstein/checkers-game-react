@@ -5,7 +5,7 @@
 
 Checkers Game App created with React js.
 
-You can watch out the app here : https://checkers-game-react.herokuapp.com/
+You can check out the app here : https://checkers-game-react.herokuapp.com/
 
 <h3>Rules:</h3>
 <hr>
@@ -18,3 +18,6 @@ You can watch out the app here : https://checkers-game-react.herokuapp.com/
 6. If a checker reaches the opposite end of the board then the checker will become a king and can move in both directions.
 7. A king can only eat a checker who is next to it.
 8. The game will end once one of the players has no more legal moves.
+
+
+Enjoy 😁
